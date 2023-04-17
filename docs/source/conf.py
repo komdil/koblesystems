@@ -28,8 +28,16 @@ intersphinx_disabled_domains = ['std']
 templates_path = ['_templates']
 
 # -- Options for HTML output
+import sphinx_rtd_theme
 
 html_theme = 'sphinx_rtd_theme'
-
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme_options = {
+    'style_nav_header_background': '#203D33',
+    'body_text': '#17332A',
+    'style_external_links': '#94AB66',
+    'style_highlight': '#CADD91',
+    'style_code_bg': 'white',
+}
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
