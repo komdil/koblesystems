@@ -140,7 +140,10 @@ venv.bak/
 /site
 
 /docs/_site
-/docs/_posts
+/docs/.sass-cache
+/docs/.jekyll-cache
+/docs/.jekyll-metadata
+/docs/vendor
 
 # mypy
 .mypy_cache/
