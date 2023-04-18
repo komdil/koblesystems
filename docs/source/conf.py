@@ -2,12 +2,12 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Koble Systems'
+copyright = 'Copyright 2023 |Koble Systems, Inc. | 350 New Holland Ave., Lancaster PA'
+author = 'Koble Systems'
 
 release = '0.1'
-version = '0.1.0'
+version = ' '
 
 # -- General configuration
 
@@ -17,6 +17,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'sphinx_rtd_theme',
+    'recommonmark',
 ]
 
 intersphinx_mapping = {
@@ -30,14 +32,13 @@ templates_path = ['_templates']
 # -- Options for HTML output
 import sphinx_rtd_theme
 
+html_show_sphinx = False
+html_show_sourcelink = False
+
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-html_theme_options = {
-    'style_nav_header_background': '#203D33',
-    'body_text': '#17332A',
-    'style_external_links': '#94AB66',
-    'style_highlight': '#CADD91',
-    'style_code_bg': 'white',
-}
+html_static_path = ['_static']
+html_css_files = ['custom.css']
+
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
