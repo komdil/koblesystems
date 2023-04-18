@@ -1,6 +1,18 @@
 # Configuration file for the Sphinx documentation builder.
+import os
+# If we're building on Read the Docs' servers, use their CDN for the latest jQuery
+on_rtd = os.environ.get('READTHEDOCS') == 'True'
+if on_rtd:
+    html_js_files = ['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js']
+else:
+    html_js_files = ['_static/jquery.js']
 
 # -- Project information
+
+if on_rtd:
+    html_baseurl = '/'
+else:
+    html_baseurl = '/koblesystems/'
 
 project = 'Koble Systems'
 copyright = 'Copyright 2023 |Koble Systems, Inc. | 350 New Holland Ave., Lancaster PA'
